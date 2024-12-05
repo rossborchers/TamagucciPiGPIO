@@ -41,12 +41,14 @@ def main():
                     left_down = True
                     press_time = time.time()
                     press_count+=1
+                    keyboard.press(Key.left)
                     print("Left pressed %d" % press_count)
             else:
                 if left_down:
                     left_down = False
                     press_time = time.time()
                     release_count+=1
+                    keyboard.release(Key.left)
                     print("Left released %d" % release_count)
 
             if right.is_pressed:
@@ -54,12 +56,14 @@ def main():
                     right_down = True
                     press_time = time.time()
                     press_count+=1
+                    keyboard.press(Key.right)
                     print("Right pressed %d" % press_count)
             else:
                 if right_down:
                     right_down = False
                     press_time = time.time()
                     release_count+=1
+                    keyboard.release(Key.right)
                     print("Right released %d" % release_count)
 
             if space.is_pressed:
@@ -67,12 +71,14 @@ def main():
                     space_down = True
                     press_time = time.time()
                     press_count+=1
+                    keyboard.press(Key.space)
                     print("Space pressed %d" % press_count)
             else:
                 if space_down:
                     space_down = False
                     press_time = time.time()
                     release_count+=1
+                    keyboard.release(Key.space)
                     print("Space released %d" % release_count)
 
             if escape.is_pressed:
@@ -80,12 +86,14 @@ def main():
                     escape_down = True
                     press_time = time.time()
                     press_count+=1
+                    keyboard.press(Key.esc)
                     print("Escape pressed %d" % press_count)
             else:
                 if escape_down:
                     escape_down = False
                     press_time = time.time()
                     release_count+=1
+                    keyboard.release(Key.esc)
                     print("Escape released %d" % release_count)
 
     except KeyboardInterrupt:
